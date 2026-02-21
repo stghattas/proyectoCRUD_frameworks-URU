@@ -19,3 +19,5 @@ Aplicación web desarrollada en **React** para la gestión de un recetario. Este
 3. Instala las dependencias ejecutando: `npm install`
 4. Inicia el servidor de desarrollo ejecutando: `npm run dev`
 5. Abre el enlace local en tu navegador (usualmente `http://localhost:5173`).
+
+### Hecho por Samer Ghattas - 31.887.714
