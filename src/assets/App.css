@@ -1,0 +1,109 @@
+/* --- Variables Profesionales (Estilo SaaS / Dashboard) --- */
+:root {
+  --primary-color: #0f62fe; /* Azul corporativo */
+  --primary-hover: #0353e9;
+  --bg-app: #f4f5f7;
+  --bg-surface: #ffffff;
+  --text-main: #111827;
+  --text-secondary: #4b5563;
+  --border-color: #e5e7eb;
+  --danger-color: #ef4444;
+  --radius: 6px; /* Bordes menos redondeados para un look más formal */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+  background-color: var(--bg-app); 
+  color: var(--text-main); 
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Formularios y Botones --- */
+input, textarea {
+  width: 100%; padding: 10px 12px; margin-top: 4px;
+  border: 1px solid var(--border-color); border-radius: var(--radius);
+  font-family: inherit; font-size: 14px; background-color: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, textarea:focus { 
+  outline: none; border-color: var(--primary-color); 
+  box-shadow: 0 0 0 3px rgba(15, 98, 254, 0.15); background-color: var(--bg-surface);
+}
+
+button {
+  border: 1px solid transparent; border-radius: var(--radius); 
+  padding: 8px 16px; font-weight: 500; cursor: pointer; font-size: 14px;
+  transition: all 0.2s; background: var(--primary-color); color: white;
+}
+button:hover { background: var(--primary-hover); }
+
+/* --- Login --- */
+.login-wrapper { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+.login-card {
+  background: var(--bg-surface); padding: 40px; border-radius: var(--radius);
+  border: 1px solid var(--border-color); width: 100%; max-width: 380px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.login-card h2 { text-align: center; margin-bottom: 24px; color: var(--text-main); font-weight: 600; }
+.login-card label { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+.login-card button { width: 100%; margin-top: 24px; padding: 10px; font-size: 15px; }
+
+/* --- Dashboard --- */
+.dashboard-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+.dashboard-header { 
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid var(--border-color);
+}
+.dashboard-header h1 { font-size: 24px; font-weight: 600; letter-spacing: -0.5px; }
+
+/* Grid */
+.recipe-grid { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 24px; }
+
+/* --- REQUISITO: Crop y Variantes --- */
+.recipe-crop-container {
+  max-width: 280px; max-height: 300px; overflow: hidden;
+  background: var(--bg-surface); border: 1px solid var(--border-color);
+  border-radius: var(--radius); cursor: pointer; transition: border-color 0.2s;
+  flex: 1 1 250px; /* Flexbox para que se acomoden bien */
+}
+.recipe-crop-container:hover { border-color: var(--primary-color); }
+
+.variant-1 { padding: 20px; }
+.variant-1 h3 { font-size: 16px; margin-bottom: 8px; }
+.variant-1 p { font-size: 13px; color: var(--text-secondary); }
+
+.variant-2 { display: flex; align-items: center; padding: 12px 20px; max-height: 70px; border-left: 4px solid var(--primary-color); }
+.variant-2 h4 { font-size: 15px; margin: 0; font-weight: 500; }
+
+.variant-3 { padding: 24px; background-color: #1f2937; color: white; border: none; }
+.variant-3 h3 { color: white; margin-bottom: 10px; font-size: 18px; }
+.variant-3 p { color: #d1d5db; font-size: 13px; }
+
+.variant-4 { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; }
+.variant-4 h3 { font-size: 24px; margin-bottom: 8px; }
+.variant-4 p { font-size: 14px; font-weight: 500; }
+
+/* --- Modal UI --- */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(17, 24, 39, 0.7); display: flex; justify-content: center; align-items: center; z-index: 50;
+}
+.modal-content {
+  background: var(--bg-surface); padding: 32px; border-radius: var(--radius);
+  width: 100%; max-width: 550px; max-height: 85vh; overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.modal-content h2 { font-size: 22px; margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+.modal-content h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-secondary); margin: 20px 0 10px 0; }
+.modal-content ul, .modal-content ol { padding-left: 20px; font-size: 14px; color: var(--text-main); margin-bottom: 16px; }
+.modal-content li { margin-bottom: 6px; }
+
+/* Botones especiales */
+.btn-outline { background: transparent; color: var(--text-main); border: 1px solid var(--border-color); }
+.btn-outline:hover { background: var(--bg-app); }
+.btn-danger { background: var(--danger-color); color: white; }
+.btn-danger:hover { background: #dc2626; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 20px; }
