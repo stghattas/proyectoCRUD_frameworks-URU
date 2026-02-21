@@ -1,16 +1,21 @@
-# React + Vite
+# 🍲 Sistema de Gestión de Recetas (CRUD)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada en **React** para la gestión de un recetario. Este proyecto fue creado para la materia de Frameworks y cumple con todos los requerimientos de evaluación establecidos.
 
-Currently, two official plugins are available:
+## ✨ Características y Requisitos Cumplidos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Autenticación de Acceso:** Sistema de login simulado que verifica credenciales antes de mostrar el contenido (Usuario: `admin` / Clave: `1234`).
+* **CRUD Completo:** Permite Crear, Leer, Actualizar (Editar) y Eliminar recetas de forma dinámica.
+* **Componentes Adaptables (4 versiones):** Uso de la propiedad `variant` para renderizar el componente de la receta en 4 diseños distintos (Estándar, Compacta, Destacada y Miniatura) dentro de la misma vista.
+* **Control de Dimensiones y Cropping:** Implementación de CSS puro (`max-width`, `max-height`, y `overflow: hidden`) para recortar visualmente el contenido excedente en las tarjetas.
+* **Visualización en Popup (Modal):** Al hacer clic en cualquier receta del listado, se despliega un Modal con el detalle completo.
+* **Estructura de Datos Dinámica:** Formularios que permiten agregar una cantidad ilimitada de ingredientes (con cantidades) y pasos a seguir, además de comentarios adicionales.
+* **Persistencia de Datos (Extra):** Uso de `localStorage` para que las recetas no se borren al recargar la página.
 
-## React Compiler
+## 🚀 Cómo ejecutar el proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clona o descarga el repositorio.
+2. Abre la terminal en la carpeta del proyecto.
+3. Instala las dependencias ejecutando: `npm install`
+4. Inicia el servidor de desarrollo ejecutando: `npm run dev`
+5. Abre el enlace local en tu navegador (usualmente `http://localhost:5173`).
